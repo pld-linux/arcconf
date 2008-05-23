@@ -26,12 +26,11 @@ Compatible Products:
 - Adaptec RAID 3805
 
 %prep
+%setup -q -c
 %ifarch %{ix86}
-%setup -q
 install linux/cmdline/arcconf .
 %endif
 %ifarch %{x8664}
-%setup -q -c
 install %{SOURCE1} arcconf
 %endif
 
