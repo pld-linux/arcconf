@@ -6,9 +6,10 @@ License:	Adaptec Downloadable Software License
 Group:		Base
 Source0:	http://www.obvious.co.nz/aacraid/arcconf/%{name}-5.5-b17523.tgz
 # Source0-md5:	57780bff5d397dabea3ee2d937feac7d
-# From adaptec CD, ver 5.20
+# From http://download.adaptec.com/raid/storage_manager/asm_linux_x64_v5_30_17509.rpm
+# v5.30
 Source1:	%{name}64
-# Source1-md5:	140dfcade7c191d72970558a0177060a
+# Source1-md5:	c1add88f7c7f8a8a333ac9c823ad42d3
 URL:		http://linux.adaptec.com/
 ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
