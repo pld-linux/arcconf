@@ -1,11 +1,11 @@
 Summary:	Adaptec uniform command line interface
 Name:		arcconf
-Version:	5.30
+Version:	5.50
 Release:	1
-License:	Unknown
+License:	Adaptec Downloadable Software License
 Group:		Base
-Source0:	http://www.obvious.co.nz/aacraid/arcconf/%{name}-5.3-b17509.tgz
-# Source0-md5:	d1b46891dcf0c6a9a4cde9e3c82bb594
+Source0:	http://www.obvious.co.nz/aacraid/arcconf/%{name}-5.5-b17523.tgz
+# Source0-md5:	57780bff5d397dabea3ee2d937feac7d
 # From adaptec CD, ver 5.20
 Source1:	%{name}64
 # Source1-md5:	140dfcade7c191d72970558a0177060a
