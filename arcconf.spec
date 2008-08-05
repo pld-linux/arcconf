@@ -1,11 +1,11 @@
 Summary:	Adaptec uniform command line interface
 Name:		arcconf
-Version:	5.50
+Version:	6.0
 Release:	1
 License:	Adaptec Downloadable Software License
 Group:		Base
-Source0:	http://www.obvious.co.nz/aacraid/arcconf/%{name}-5.5-b17523.tgz
-# Source0-md5:	57780bff5d397dabea3ee2d937feac7d
+Source0:	http://www.obvious.co.nz/aacraid/arcconf/%{name}-6.0-b17922.tgz 
+# Source0-md5:	222c459447edbe7e836324056408bb0b
 # From http://download.adaptec.com/raid/storage_manager/asm_linux_x64_v5_30_17509.rpm
 # v5.30
 Source1:	%{name}64
