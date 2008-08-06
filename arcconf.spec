@@ -12,6 +12,7 @@ ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sbindir		/sbin
+%define		_enable_debug_packages	0
 
 %description
 Adaptec Storage Manager Command Line Utility.
@@ -26,10 +27,10 @@ Compatible Products:
 %prep
 %setup -q -c -a1
 %ifarch %{ix86}
-install linux/cmdline/arcconf .
+install linux/cmdline/{arcconf,README.TXT} .
 %endif
 %ifarch %{x8664}
-install linux-x64/cmdline/arcconf .
+install linux-x64/cmdline/{arcconf,README.TXT} .
 %endif
 
 %build
@@ -45,4 +46,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc README.TXT
 %attr(755,root,root) %{_sbindir}/*
