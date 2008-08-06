@@ -5,11 +5,8 @@ Release:	1
 License:	Adaptec Downloadable Software License
 Group:		Base
 Source0:	http://www.obvious.co.nz/aacraid/arcconf/%{name}-6.0-b17922.tgz 
-# Source0-md5:	222c459447edbe7e836324056408bb0b
-# From http://download.adaptec.com/raid/storage_manager/asm_linux_x64_v5_30_17509.rpm
-# v5.30
-Source1:	%{name}64
-# Source1-md5:	c1add88f7c7f8a8a333ac9c823ad42d3
+Source1:	http://www.obvious.co.nz/aacraid/arcconf/%{name}-x64-6.0-b17922.tgz
+# Source1-md5:	70684147e6e04cdbdad1891c6b8e6799
 URL:		http://linux.adaptec.com/
 ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -27,12 +24,12 @@ Compatible Products:
 - Adaptec RAID 3805
 
 %prep
-%setup -q -c
+%setup -q -c -a1
 %ifarch %{ix86}
 install linux/cmdline/arcconf .
 %endif
 %ifarch %{x8664}
-install %{SOURCE1} arcconf
+install linux-x64/cmdline/arcconf .
 %endif
 
 %build
