@@ -4,6 +4,7 @@ Version:	6.0
 Release:	1
 License:	Adaptec Downloadable Software License
 Group:		Base
+# tgz tarballs originaly came from 30MB+ Storage Manager RPM Files
 Source0:	http://www.obvious.co.nz/aacraid/arcconf/%{name}-6.0-b17922.tgz 
 Source1:	http://www.obvious.co.nz/aacraid/arcconf/%{name}-x64-6.0-b17922.tgz
 # Source1-md5:	70684147e6e04cdbdad1891c6b8e6799
