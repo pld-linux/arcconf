@@ -1,4 +1,5 @@
 Summary:	Adaptec uniform command line interface
+Summary(pl.UTF-8):	Ujednolicony interfajs linii poleceń Adapteca
 Name:		arcconf
 Version:	6.0
 Release:	1
@@ -6,6 +7,7 @@ License:	Adaptec Downloadable Software License
 Group:		Base
 # tgz tarballs originaly came from 30MB+ Storage Manager RPM Files
 Source0:	http://www.obvious.co.nz/aacraid/arcconf/%{name}-6.0-b17922.tgz 
+# Source0-md5:	222c459447edbe7e836324056408bb0b
 Source1:	http://www.obvious.co.nz/aacraid/arcconf/%{name}-x64-6.0-b17922.tgz
 # Source1-md5:	70684147e6e04cdbdad1891c6b8e6799
 URL:		http://linux.adaptec.com/
@@ -25,6 +27,17 @@ Compatible Products:
 - Adaptec RAID 3405
 - Adaptec RAID 3805
 
+%description -l pl.UTF-8
+Obsługiwane z linii poleceń narzędzie do zarządzania kontrolerami
+Adapteca.
+
+Obsługiwane kontrolery:
+- Adaptec RAID 3085
+- Adaptec RAID 31205
+- Adaptec RAID 31605
+- Adaptec RAID 3405
+- Adaptec RAID 3805
+
 %prep
 %setup -q -c -a1
 %ifarch %{ix86}
@@ -33,8 +46,6 @@ install linux/cmdline/{arcconf,README.TXT} .
 %ifarch %{x8664}
 install linux-x64/cmdline/{arcconf,README.TXT} .
 %endif
-
-%build
 
 %install
 rm -rf $RPM_BUILD_ROOT
