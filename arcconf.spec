@@ -11,7 +11,7 @@ Source0:	http://www.obvious.co.nz/aacraid/arcconf/%{name}-6.0-b%{build}.tgz
 # Source0-md5:	222c459447edbe7e836324056408bb0b
 Source1:	http://www.obvious.co.nz/aacraid/arcconf/%{name}-x64-6.0-b%{build}.tgz
 # Source1-md5:	70684147e6e04cdbdad1891c6b8e6799
-URL:		http://linux.adaptec.com/
+URL:		http://www.adaptec.com/en-US/downloads/storage_manager/sm?productId=SAS-3405
 ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
