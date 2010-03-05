@@ -1,16 +1,17 @@
-%define		build	18507
+%define		ver	6.40
+%define		build	18530
 Summary:	Adaptec uniform command line interface
 Summary(pl.UTF-8):	Ujednolicony interfajs linii poleceń Adapteca
 Name:		arcconf
-Version:	6.30.%{build}
+Version:	%{ver}.%{build}
 Release:	1
 License:	Adaptec Downloadable Software License
 Group:		Base
 # tgz tarballs originaly came from 30MB+ Storage Manager RPM Files
-Source0:	http://www.obvious.co.nz/aacraid/arcconf/%{name}-6.30-b%{build}.tgz
-# Source0-md5:	8e7c1c76bb34bbe03b5363eee8819eaf
-Source1:	http://www.obvious.co.nz/aacraid/arcconf/%{name}-x64-6.30-b%{build}.tgz
-# Source1-md5:	71045198a9e254cf35aa8471d7b283b8
+Source0:	http://www.obvious.co.nz/aacraid/arcconf/%{name}-%{ver}-b%{build}.tgz
+# Source0-md5:	f75fec99b417f7e5db0dcd0fb23f982e
+Source1:	http://www.obvious.co.nz/aacraid/arcconf/%{name}-x64-%{ver}-b%{build}.tgz
+# Source1-md5:	9163e1983e5874825e2428850e74c25f
 URL:		http://www.adaptec.com/en-US/downloads/storage_manager/sm?productId=SAS-3405
 ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
