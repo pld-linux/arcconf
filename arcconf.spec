@@ -1,7 +1,7 @@
 %define		ver	6.50
 %define		build	18570
 Summary:	Adaptec uniform command line interface
-Summary(pl.UTF-8):	Ujednolicony interfajs linii poleceń Adapteca
+Summary(pl.UTF-8):	Ujednolicony interfejs linii poleceń Adapteca
 Name:		arcconf
 Version:	%{ver}.%{build}
 Release:	1
