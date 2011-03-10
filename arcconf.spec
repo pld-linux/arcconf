@@ -1,5 +1,5 @@
 %define		ver	6.50
-%define		build	18570
+%define		build	18579
 Summary:	Adaptec uniform command line interface
 Summary(pl.UTF-8):	Ujednolicony interfejs linii poleceń Adapteca
 Name:		arcconf
@@ -9,9 +9,11 @@ License:	Adaptec Downloadable Software License
 Group:		Base
 # tgz tarballs originaly came from 30MB+ Storage Manager RPM Files
 Source0:	http://www.obvious.co.nz/aacraid/arcconf/%{name}-%{ver}-b%{build}.tgz
-# Source0-md5:	a8b9426238787638820a24cb91b327e3
+# Source0-md5:	8382559bd94a744d62572863c802d819
 Source1:	http://www.obvious.co.nz/aacraid/arcconf/%{name}-x64-%{ver}-b%{build}.tgz
-# Source1-md5:	d4039d6d5e85233f0084c02828affa88
+# Source1-md5:	10736e1c44a79b7e4b7f0f45c06a515e
+Source2:	http://www.obvious.co.nz/aacraid/arcconf/CLI_v6_50_%{build}_Users_Guide.pdf
+# Source2-md5:	45ffcaf59805cb6f0812651ab1b377bb
 URL:		http://www.adaptec.com/en-US/downloads/storage_manager/sm?productId=SAS-3405
 ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -49,6 +51,8 @@ Obsługiwane kontrolery:
 %endif
 mv linux*/cmdline/* .
 
+install %{SOURCE2} .
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_sbindir}
@@ -59,5 +63,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.TXT
+%doc README.TXT *.pdf
 %attr(755,root,root) %{_sbindir}/*
