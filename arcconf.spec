@@ -1,6 +1,6 @@
-%define		fver	1_7
+%define		fver	2_02
 %define		ver		%(echo %{fver} | tr _ .)
-%define		subver	21229
+%define		subver	22404
 Summary:	Adaptec uniform command line interface
 Summary(pl.UTF-8):	Ujednolicony interfejs linii poleceń Adapteca
 Name:		arcconf
@@ -11,8 +11,8 @@ License:	Adaptec Downloadable Software License
 Group:		Base
 # link from any lastest adaptec controller download
 Source0:	http://download.adaptec.com/raid/storage_manager/%{name}_v%{fver}_%{subver}.zip
-# Source0-md5:	8d8e1829172bb72f69081b2ac6d2e50b
-URL:		https://www.adaptec.com/en-us/downloads/storage_manager/sm/productid=asr-8805&dn=adaptec+raid+8805.html
+# Source0-md5:	373126b8d256aa76022906145a87d398
+URL:		http://storage.microsemi.com/en-us/downloads/storage_manager/sm/productid=asr-81605zq&dn=adaptec+raid+81605zq.php
 ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
