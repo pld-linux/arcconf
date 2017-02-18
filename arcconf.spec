@@ -5,7 +5,7 @@ Summary:	Adaptec uniform command line interface
 Summary(pl.UTF-8):	Ujednolicony interfejs linii poleceń Adapteca
 Name:		arcconf
 Version:	%{ver}.%{subver}
-Release:	1
+Release:	2
 Epoch:		1
 License:	Adaptec Downloadable Software License
 Group:		Base
@@ -13,7 +13,7 @@ Group:		Base
 Source0:	http://download.adaptec.com/raid/storage_manager/%{name}_v%{fver}_%{subver}.zip
 # Source0-md5:	e98c9f2fb11d368adc0378ddd9daad40
 URL:		http://storage.microsemi.com/en-us/downloads/storage_manager/sm/productid=asr-81605zq&dn=adaptec+raid+81605zq.php
-ExclusiveArch:	%{ix86} %{x8664}
+ExclusiveArch:	%{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sbindir		/sbin
@@ -79,17 +79,11 @@ Obsługiwane kontrolery:
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_sbindir}
 
-%ifarch %{x8664}
 install -p linux_x64/cmdline/arcconf $RPM_BUILD_ROOT%{_sbindir}/arcconf
-%endif
-%ifarch %{ix86}
-install -p linux/cmdline/arcconf $RPM_BUILD_ROOT%{_sbindir}/arcconf
-%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-#%doc README.TXT
 %attr(755,root,root) %{_sbindir}/arcconf
