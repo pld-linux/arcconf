@@ -5,7 +5,7 @@ Summary:	Adaptec uniform command line interface
 Summary(pl.UTF-8):	Ujednolicony interfejs linii poleceń Adapteca
 Name:		arcconf
 Version:	%{ver}.%{subver}
-Release:	2
+Release:	3
 Epoch:		1
 License:	Adaptec Downloadable Software License
 Group:		Base
